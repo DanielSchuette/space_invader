@@ -34,6 +34,6 @@ end
 
 function love.draw()
     push:start()
-    love.graphics.draw(gTextures["aliens"])
+    love.graphics.draw(gTextures["aliens"], gFrames["aliens"][2]) -- lua's 1 indexed
     push:finish()
 end
