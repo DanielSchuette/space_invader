@@ -26,10 +26,11 @@ function love.load()
     local shipIndex = 5 * 16 + 6
 
     ship = Ship(VIRTUAL_WIDTH/2 - ALIEN_WIDTH/2,
-        VIRTUAL_HEIGHT/2 - 24, shipIndex) 
+        VIRTUAL_HEIGHT - 72, shipIndex) 
 end
 
 function love.update(dt)
+    ship:update(dt)
 end
 
 function love.keypressed(key)
