@@ -8,4 +8,8 @@ WINDOW_HEIGHT = VIRTUAL_HEIGHT * 3
 ALIEN_WIDTH = 12
 ALIEN_HEIGHT = 12
 
-SHIP_SPEED = 80
+SHIP_SPEED = 100
+
+ALIENS_WIDE = 11 -- columns of aliens
+ALIENS_TALL = 5  -- rows of aliens
+ALIEN_PADDING = 6 -- padding between aliens
