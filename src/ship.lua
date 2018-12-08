@@ -1,14 +1,9 @@
 --[[
     Ship class
+    A Ship inherits from an Entity
 ]]
 
-Ship = Class{} -- create a Ship class
-
-function Ship:init()
-end
+Ship = Class{__includes = Entity} 
 
 function Ship:update(dt)
-end
-
-function Ship:render()
 end

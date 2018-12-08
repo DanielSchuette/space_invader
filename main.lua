@@ -15,12 +15,18 @@ function love.load()
     love.window.setTitle("Space Invaders")
     gFont = love.graphics.newFont("fonts/PressStart2P.ttf", 8) -- 8px font; comes from dafont.com/de/bitmap.php
     love.graphics.setFont(gFont) -- gFont is meant to be `global'
+
     push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, 
     {
         fullscreen = false,
         vsync = true,
         resizable = true
     })
+
+    local shipIndex = 5 * 16 + 6
+
+    ship = Ship(VIRTUAL_WIDTH/2 - ALIEN_WIDTH/2,
+        VIRTUAL_HEIGHT/2 - 24, shipIndex) 
 end
 
 function love.update(dt)
@@ -34,6 +40,6 @@ end
 
 function love.draw()
     push:start()
-    love.graphics.draw(gTextures["aliens"], gFrames["aliens"][2]) -- lua's 1 indexed
+    ship:render()
     push:finish()
 end
